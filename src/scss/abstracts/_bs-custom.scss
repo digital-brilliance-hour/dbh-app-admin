@@ -7,7 +7,7 @@ $fn:'HelveticaNeue'; // fn = font normal
 $fm:'HelveticaNeueMed'; // fm = font Medium 
 $border-radius: 0.75rem;
 // Body
-$body-bg   : #F5F9F1;
+$body-bg   : #F2F2F2;
 $body-color: #7e7e7e;
 
 // Typography
@@ -99,11 +99,11 @@ $colors: map-merge((
 
 
   
-$primary  : #6CC51D !default;
+$primary  : #2D91B9 !default;
 /*$primary  : #7356f1 !default;*/
 $secondary: #C046D3 !default;
-$success  : #37D1BF !default;
-$info     : #1EA7C5 !default;
+$success  : #96C0D2 !default;
+$info     : #024865 !default;
 $warning  : #FF9432 !default;
 $danger   : #FF285C !default;
 $light    : #E8E8E8 !default;
