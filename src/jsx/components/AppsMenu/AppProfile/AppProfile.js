@@ -142,7 +142,7 @@ const AppProfile = () => {
                            <div className="row">
                               <div className="col">
                                  <h3 className="m-b-0">150</h3>
-                                 <span>Follower</span>
+                                 <span>Followers</span>
                               </div>
                               <div className="col">
                                  <h3 className="m-b-0">140</h3>
