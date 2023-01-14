@@ -90,10 +90,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass" : "sass src/scss:src/css --watch --no-source-map"
+    "sass" : "sass src/scss:src/css --watch --no-source-map",
+    "sass:compile" : "sass src/scss:src/css"
   },
   "eslintConfig": {
     "extends": [
