@@ -101,6 +101,7 @@ import Error404 from './pages/Error404'
 import Error500 from './pages/Error500'
 import Error503 from './pages/Error503'
 import Todo from './pages/Todo';
+import Course from './pages/Courses/course';
 
 //Scroll To Top
 import ScrollToTop from './layouts/ScrollToTop';
@@ -208,6 +209,7 @@ const Markup = () => {
     { url: 'page-error-404', component: Error404 },
     { url: 'page-error-500', component: Error500 },
     { url: 'page-error-503', component: Error503 },
+    { url: 'course', component: Course },
     { url: 'todo', component: Todo },
   ]
 
