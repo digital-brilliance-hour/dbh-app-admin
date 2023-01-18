@@ -142,6 +142,7 @@ class SideBar extends Component {
             "page-error-404",
             "page-error-500",
             "page-error-503",
+            "course",
          ],
          error = [
             "page-error-400",
@@ -915,6 +916,16 @@ class SideBar extends Component {
                               to="/page-lock-screen"
                            >
                               Lock Screen
+							  </Link>
+                        </li>
+                        <li>
+                           <Link
+                              className={`${
+                                 path === "course" ? "mm-active" : ""
+                              }`}
+                              to="/course"
+                           >
+                              Course Page
 							  </Link>
                         </li>
                      </ul>
