@@ -203,7 +203,7 @@ const profileTable = {
    columns: [
       "",
       "Name",
-      "Department",
+      "Dev Team",
       "Gender",
       "Education",
       "Mobile",

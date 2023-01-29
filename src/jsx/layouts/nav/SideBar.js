@@ -930,6 +930,155 @@ class SideBar extends Component {
                         </li>
                      </ul>
                   </li>
+                  <li className={`${table.includes(path) ? "mm-active" : ""}`}>
+                     <Link
+                        className="has-arrow ai-icon"
+                        to="#"
+                     >
+                        <i className="flaticon-381-network"></i>
+                        <span className="nav-text">Workshop/Group Management</span>
+                     </Link>
+                     <ul >
+                        <li
+                           className={`${
+                              error.includes(path) ? "mm-active" : ""
+                           }`}
+                        >
+                           <Link
+                              className="has-arrow"
+                              to="#"                              
+                           >
+                              Student Managment
+                           </Link>
+                           <ul >
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "table-add-student-basic"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/table-add-student-basic"
+                                 >
+                                    Add Student
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "table-edit-student-basic"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/table-edit-student-basic"
+                                 >
+                                    Assign Student
+                                 </Link>
+                              </li>
+                           </ul>
+                        </li>
+                        <li
+                           className={`${
+                              error.includes(path) ? "mm-active" : ""
+                           }`}
+                        >
+                           <Link
+                              className="has-arrow"
+                              to="#"                              
+                           >
+                              Team Managment
+                           </Link>
+                           <ul >
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "table-add-team-basic"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/table-add-team-basic"
+                                 >
+                                    Add Team
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "table-edit-team-basic"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/table-edit-team-basic"
+                                 >
+                                    Edit/Remove Team
+                                 </Link>
+                              </li>
+                           </ul>
+                        </li>
+                        <li
+                           className={`${
+                              error.includes(path) ? "mm-active" : ""
+                           }`}
+                        >
+                           <Link
+                              className="has-arrow"
+                              to="#"                              
+                           >
+                              Post Management
+                           </Link>
+                           <ul >
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "create-post"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/create-post"
+                                 >
+                                    Create Post
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "edit-post"
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/edit-post"
+                                 >
+                                    View/Remove Post
+                                 </Link>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <Link
+                              className={`${
+                                 path === "table-add-teachers-basic"
+                                    ? "mm-active"
+                                    : ""
+                              }`}
+                              to="/table-add-teachers-basic"
+                           >
+                              Add Teachers
+                           </Link>
+                        </li>
+                        <li>
+                           <Link 
+                              className={`${
+                                 path === "app-class-calender"
+                                    ? "mm-active"
+                                    : ""
+                              }`} 
+                              to="/app-class-calender"
+                           >
+                              Zoom Event
+                           </Link>
+                        </li>
+                     </ul>
+                  </li>
                </MM>
                <div className="drum-box mt-5">
                   <img src={drump} alt="" />

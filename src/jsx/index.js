@@ -22,10 +22,13 @@ import Task from './components/Dashboard/Task';
 /// App
 import AppProfile from './components/AppsMenu/AppProfile/AppProfile'
 import PostDetails from './components/AppsMenu/AppProfile/PostDetails'
+import CreatePost from './components/AppsMenu/AppProfile/Post'
+import EditPost from './components/AppsMenu/AppProfile/EditPost'
 import Compose from './components/AppsMenu/Email/Compose/Compose'
 import Inbox from './components/AppsMenu/Email/Inbox/Inbox'
 import Read from './components/AppsMenu/Email/Read/Read'
 import Calendar from './components/AppsMenu/Calendar/Calendar'
+import ClassCalendar from './components/AppsMenu/Calendar/ClassCalendar'
 
 /// Product List
 import ProductGrid from './components/AppsMenu/Shop/ProductGrid/ProductGrid'
@@ -78,6 +81,12 @@ import Widget from './pages/Widget'
 /// Table
 import DataTable from './components/table/DataTable'
 import BootstrapTable from './components/table/BootstrapTable'
+import EditTeamTable from './components/table/EditTeamTable'
+import AddTeacherTable from './components/table/AddTeachersTable'
+import AddTeamTable from './components/table/AddTeamTable'
+import AddStudentTable from './components/table/AddStudentTable'
+import EditStudentTable from './components/table/EditStudentTable'
+
 //import SortingTable from "./components/table/SortingTable/SortingTable";
 //import FilteringTable from "./components/table/FilteringTable/FilteringTable";
 
@@ -127,11 +136,15 @@ const Markup = () => {
 
     /// Apps
     { url: 'app-profile', component: AppProfile },
+    { url: 'create-post', component: CreatePost },
+    { url: 'edit-post', component: EditPost },
     { url: 'post-details', component: PostDetails },
     { url: 'email-compose', component: Compose },
     { url: 'email-inbox', component: Inbox },
     { url: 'email-read', component: Read },
     { url: 'app-calender', component: Calendar },
+    { url: 'app-class-calender', component: ClassCalendar },
+    
     
 
     /// Chart
@@ -197,6 +210,11 @@ const Markup = () => {
     /// table
     { url: 'table-datatable-basic', component: DataTable },
     { url: 'table-bootstrap-basic', component: BootstrapTable },
+    { url: 'table-edit-team-basic', component: EditTeamTable },
+    { url: 'table-add-teachers-basic', component: AddTeacherTable },
+    { url: 'table-add-student-basic', component: AddStudentTable },
+    { url: 'table-add-team-basic', component: AddTeamTable },
+    { url: 'table-edit-student-basic', component: EditStudentTable },
     //{ url: 'table-filtering', component: FilteringTable },
     //{ url: 'table-sorting', component: SortingTable },
 
