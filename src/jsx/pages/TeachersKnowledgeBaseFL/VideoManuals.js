@@ -3,7 +3,8 @@ import { Link} from 'react-router-dom';
 import {Dropdown, Modal} from 'react-bootstrap';
 import swal from "sweetalert";
 import {nanoid} from 'nanoid';
-//Images
+import PageTitle from "../../layouts/PageTitle";
+//turn images into videos
 //import data from './../Boltz/Task/Postpage.json';
 import card1 from './../../../images/task/img1.jpg';
 import card2 from './../../../images/task/img2.jpg';
@@ -17,36 +18,28 @@ import user from './../../../images/task/user.jpg';
 
 const CardListBlog = [
 	{ 
-		id:1, image: card1, Cust_Id:"01234",  Date_Join:"19/02/2021", 
-		Cust_Name: "Munaroh Steffani", Location:"India"
+		id:1, image: card1, Cust_Id:"01234"
 	},
 	{ 
-		id:2, image: card2, Cust_Id:"01235", Date_Join:"20/03/2021", 
-		Cust_Name: "Geovanny Anderson", 	Location:"London " 
+		id:2, image: card2, Cust_Id:"01235"
 	},
 	{ 
-		id:3, image: card3, Cust_Id:"01236", Date_Join:"21/04/2021", 
-		Cust_Name: "Louis Ali", Location:"Afghanistan" 
+		id:3, image: card3, Cust_Id:"01236" 
 	},
 	{ 
-		id:4, image: card4, Cust_Id:"01237", Date_Join:"22/05/2021", 
-		Cust_Name: "Marquezz", Location:"Belgium" 
+		id:4, image: card4, Cust_Id:"01237" 
 	},
 	{ 
-		id:5, image: card5, Cust_Id:"01238", Date_Join:"23/06/2021", 
-		Cust_Name: "Richard ", Location:"Colombia" 
+		id:5, image: card5, Cust_Id:"01238"
 	},
 	{ 
-		id:6, image: card6, Cust_Id:"01239", Date_Join:"24/07/2021", 
-		Cust_Name: "Andrew Stevano",  	Location:"Czechia"
+		id:6, image: card6, Cust_Id:"01239"
 	},
 	{ 
-		id:7, image: card7, Cust_Id:"01240", Date_Join:"25/08/2021", 
-		Cust_Name: "Cathenna ",  Location:"El Salvador"
+		id:7, image: card7, Cust_Id:"01240"
 	},
 	{ 
-		id:8, image: card8, Cust_Id:"01241", Date_Join:"26/09/2021", 
-		Cust_Name: "Hrisovalantis ",  	Location:"Guatemala"
+		id:8, image: card8, Cust_Id:"01241"
 	} 
 ];
 
@@ -185,6 +178,7 @@ const VideoManuals = () => {
     
     return(
         <>
+        <PageTitle activeMenu="Video Manuals" motherMenu="Pages" />
 			<div className="mb-sm-5 mb-3 d-flex flex-wrap align-items-center text-head">
 				<Link className="btn btn-primary font-w600 mb-2 mr-auto" onClick={()=> setPostModal(true)}>Add Video</Link>
 				 {/* <!-- Modal --> */}

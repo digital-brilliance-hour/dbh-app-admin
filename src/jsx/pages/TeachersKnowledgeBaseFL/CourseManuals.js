@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PageTitle from "../../layouts/PageTitle";
 import {
@@ -6,10 +6,7 @@ import {
    Col,
    Card,
    Table,
-   Badge,
-   Dropdown,
-   ProgressBar,
-   NavLink,
+   Badge
 } from "react-bootstrap";
 
 const CourseManuals = () => {
