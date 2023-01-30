@@ -111,6 +111,14 @@ import Error500 from './pages/Error500'
 import Error503 from './pages/Error503'
 import Todo from './pages/Todo';
 import Course from './pages/Courses/course';
+import CourseManuals from './pages/TeachersKnowledgeBaseFL/CourseManuals';
+import FrequentlyAskedQuestionsForTeachers from './pages/TeachersKnowledgeBaseFL/FrequentlyAskedQuestionsForTeachers';
+import HelpfulLinks from './pages/TeachersKnowledgeBaseFL/HelpfulLinks';
+import Policies from './pages/TeachersKnowledgeBaseFL/Policies';
+import StudentInteractionRules from './pages/TeachersKnowledgeBaseFL/StudentInteractionRules';
+import StudentParentRules from './pages/TeachersKnowledgeBaseFL/StudentParentRules';
+import Timeline from './pages/TeachersKnowledgeBaseFL/Timeline';
+import VideoManuals from './pages/TeachersKnowledgeBaseFL/VideoManuals';
 import Profile from './pages/Profiles/profile';
 
 //Scroll To Top
@@ -229,6 +237,14 @@ const Markup = () => {
     { url: 'page-error-500', component: Error500 },
     { url: 'page-error-503', component: Error503 },
     { url: 'course', component: Course },
+    { url: 'CourseManuals', component: CourseManuals },
+    { url: 'FrequentlyAskedQuestionsForTeachers', component: FrequentlyAskedQuestionsForTeachers },
+    { url: 'HelpfulLinks', component: HelpfulLinks },
+    { url: 'Policies', component: Policies },
+    { url: 'StudentInteractionRules', component: StudentInteractionRules },
+    { url: 'StudentParentRules', component: StudentParentRules },
+    { url: 'Timeline', component: Timeline },
+    { url: 'VideoManuals', component: VideoManuals },
     { url: 'todo', component: Todo },
     { url: 'profile', component: Profile },
   ]

@@ -143,6 +143,14 @@ class SideBar extends Component {
             "page-error-500",
             "page-error-503",
             "course",
+            "CourseManuals",
+            "FrequentlyAskedQuestionsForTeachers",
+            "HelpfulLinks",
+            "Policies",
+            "StudentInteractionRules",
+            "StudentParentRules",
+            "Timeline",
+            "VideoManuals",
             "profile",
          ],
          error = [
@@ -151,6 +159,16 @@ class SideBar extends Component {
             "page-error-404",
             "page-error-500",
             "page-error-503",
+         ],
+         TKnowledgeBase = [
+            "CourseManuals",
+            "FrequentlyAskedQuestionsForTeachers",
+            "HelpfulLinks",
+            "Policies",
+            "StudentInteractionRules",
+            "StudentParentRules",
+            "Timeline",
+            "VideoManuals",
          ];
       return (
          <div className="deznav">
@@ -905,6 +923,116 @@ class SideBar extends Component {
                                     to="/page-error-503"
                                  >
                                     Error 503
+                                 </Link>
+                              </li>
+                           </ul>
+                        </li>
+                        <li
+                           className={`${
+                              TKnowledgeBase.includes(path) ? "mm-active" : ""
+                           }`}
+                        >
+                           <Link
+                              className="has-arrow"
+                              to="#"                              
+                           >
+                              Teacher Knowledge Base
+                           </Link>
+                           <ul >
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/CourseManuals" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/CourseManuals"
+                                 >
+                                    Course Manuals
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/FrequentlyAskedQuestionsForTeachers" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/FrequentlyAskedQuestionsForTeachers"
+                                 >
+                                    Frequently Asked Questions For Teachers
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/HelpfulLinks" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/HelpfulLinks"
+                                 >
+                                    Helpful Links
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/Policies" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/Policies"
+                                 >
+                                    Policies
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/StudentInteractionRules" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/StudentInteractionRules"
+                                 >
+                                   Student Interaction Rules
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/StudentParentRules" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/StudentParentRules"
+                                 >
+                                    Student/Parent Rules
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/Timeline" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/Timeline"
+                                 >
+                                    Timeline
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/VideoManuals" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/VideoManuals"
+                                 >
+                                    Video Manuals
                                  </Link>
                               </li>
                            </ul>
