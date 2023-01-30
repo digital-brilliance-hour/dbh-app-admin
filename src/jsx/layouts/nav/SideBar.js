@@ -144,7 +144,7 @@ class SideBar extends Component {
             "page-error-503",
             "course",
             "CourseManuals",
-            "FAQForTeachers",
+            "FrequentlyAskedQuestionsForTeachers",
             "HelpfulLinks",
             "Policies",
             "StudentInteractionRules",
@@ -161,7 +161,7 @@ class SideBar extends Component {
          ],
          TKnowledgeBase = [
             "CourseManuals",
-            "FAQForTeachers",
+            "FrequentlyAskedQuestionsForTeachers",
             "HelpfulLinks",
             "Policies",
             "StudentInteractionRules",
@@ -953,11 +953,11 @@ class SideBar extends Component {
                               <li>
                                  <Link
                                     className={`${
-                                       path === "/FAQForTeachers" 
+                                       path === "/FrequentlyAskedQuestionsForTeachers" 
                                           ? "mm-active"
                                           : ""
                                     }`}
-                                    to="/FAQForTeachers"
+                                    to="/FrequentlyAskedQuestionsForTeachers"
                                  >
                                     Frequently Asked Questions For Teachers
                                  </Link>
