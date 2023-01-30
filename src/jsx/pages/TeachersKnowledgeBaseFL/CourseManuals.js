@@ -15,8 +15,9 @@ import {
 const CourseManuals = () => {
 
   return(
-    <Fragment>
+   <div>
       <PageTitle activeMenu="Course Manuals" motherMenu="Pages" />
+   
       <Row>
       <Col lg={12}>
                <Card>
@@ -37,9 +38,9 @@ const CourseManuals = () => {
                            <tr>
                               <td>Beginers Course</td>
                               <td>
-                                <url>
+                                <Link to={"https://bit.ly/3Bak763"}>
                                  <Badge variant="primary light" >https://bit.ly/3Bak763</Badge>
-                                </url>
+                                </Link>
                               </td>
                               <td>Open BOR</td>
                               
@@ -80,7 +81,7 @@ const CourseManuals = () => {
                {/* <!-- /# card --> */}
             </Col>
       </Row>
-    </Fragment>
+      </div>
   ) 
 } 	
 

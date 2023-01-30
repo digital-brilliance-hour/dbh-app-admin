@@ -14,7 +14,7 @@ import {
 
 const HelpfulLinks = () => {
   return(
-    <Fragment>
+    <div>
     <PageTitle activeMenu="Help fulLinks" motherMenu="Pages" />
     <Row>
     <Col lg={12}>
@@ -73,7 +73,7 @@ const HelpfulLinks = () => {
              {/* <!-- /# card --> */}
           </Col>
     </Row>
-    </Fragment>
+    </div>
   ) 
 } 	
 

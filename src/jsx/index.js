@@ -103,7 +103,7 @@ import Error503 from './pages/Error503'
 import Todo from './pages/Todo';
 import Course from './pages/Courses/course';
 import CourseManuals from './pages/TeachersKnowledgeBaseFL/CourseManuals'
-import FrequentlyAskedQuestionsForTeachers from './pages/TeachersKnowledgeBaseFL/FrequentlyAskedQuestionsForTeachers'
+import FAQForTeachers from './pages/TeachersKnowledgeBaseFL/FAQForTeachers'
 import HelpfulLinks from './pages/TeachersKnowledgeBaseFL/HelpfulLinks'
 import Policies from './pages/TeachersKnowledgeBaseFL/Policies'
 import StudentInteractionRules from './pages/TeachersKnowledgeBaseFL/StudentInteractionRules'
@@ -219,7 +219,7 @@ const Markup = () => {
     { url: 'page-error-503', component: Error503 },
     { url: 'course', component: Course },
     { url: 'CourseManuals', component: CourseManuals },
-    { url: 'FrequentlyAskedQuestionsForTeachers', component: FrequentlyAskedQuestionsForTeachers },
+    { url: 'FAQForTeachers', component: FAQForTeachers },
     { url: 'HelpfulLinks', component: HelpfulLinks },
     { url: 'Policies', component: Policies },
     { url: 'StudentInteractionRules', component: StudentInteractionRules },
