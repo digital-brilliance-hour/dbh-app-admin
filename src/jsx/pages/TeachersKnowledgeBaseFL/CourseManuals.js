@@ -19,7 +19,7 @@ const CourseManuals = () => {
       <Col lg={12}>
                <Card>
                   <Card.Header>
-                     <Card.Title>Game Info</Card.Title>
+                     <Card.Title>Game Curriculums</Card.Title>
                   </Card.Header>
                   <Card.Body>
                      <Table responsive hover>
@@ -34,7 +34,7 @@ const CourseManuals = () => {
                         </thead>
                         <tbody>
                            <tr>
-                              <td>Beginers Course</td>
+                              <td>Beginners Course</td>
                               <td>
                                 <Link to={"https://bit.ly/3Bak763"}>
                                  <Badge variant="primary light" >https://bit.ly/3Bak763</Badge>
