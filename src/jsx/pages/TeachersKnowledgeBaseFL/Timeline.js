@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -10,118 +10,9 @@ const Timeline = () => {
   const [addPlan, setAddPlan] = useState(false);
   return (
      <React.Fragment>
+      
       <PageTitle activeMenu="Timeline" motherMenu="Pages" />
         <div className="row">
-           <div className="col-xl-3 col-xxl-4">
-              <div className="row">
-                 <div className="col-xl-12">
-                    <div className="card flex-xl-column flex-sm-row flex-column">
-                       <div className="card-body border-bottom pb-4 p-2 event-calender col-md-6 col-lg-6 col-lg-12">
-                          <Calendar onChange={onChange} value={value} />
-                       </div>
-                       <div className="card-body col-md-6 col-lg-6 col-lg-12">
-                          <h6 className="fs-16 text-black mb-4">
-                             Next week plan
-                          </h6>
-                          <div className="d-flex mb-4 align-items-center">
-                             <span className="date-icon mr-3">3</span>
-                             <div>
-                                <h6 className="fs-16">
-                                   <Link to="/workout-statistic" className="text-black">
-                                      Cardio Exercise
-                                   </Link>
-                                </h6>
-                                <span>12 Sets | 16mins</span>
-                             </div>
-                          </div>
-                          <div className="d-flex mb-4 align-items-center">
-                             <span className="date-icon mr-3">5</span>
-                             <div>
-                                <h6 className="fs-16">
-                                   <Link to="/workout-statistic" className="text-black">
-                                      Cycling Routine
-                                   </Link>
-                                </h6>
-                                <span>20Km target distances</span>
-                             </div>
-                          </div>
-                          <div className="d-flex mb-4 align-items-center">
-                             <span className="date-icon mr-3">16</span>
-                             <div>
-                                <h6 className="fs-16">
-                                   <Link to="/workout-statistic" className="text-black">
-                                      Cycling Routine
-                                   </Link>
-                                </h6>
-                                <span>20Km target distances</span>
-                             </div>
-                          </div>
-                          <Button
-                             as="a"
-                             variant="outline-primary"
-                             data-toggle="modal"
-                             data-target="#addNewPlan"
-                             className=" rounded"
-                             onClick={() => setAddPlan(true)}
-                          >
-                             Add New Plan
-                          </Button>
-                          {/* Modal */}
-                          <Modal show={addPlan} className="fade">
-                             <div className="modal-content">
-                                <Modal.Header>
-                                   <Modal.Title>Add New Plan</Modal.Title>
-                                   <Button
-                                      variant=""
-                                      onClick={() => setAddPlan(false)}
-                                      className="close"
-                                   >
-                                      <span>×</span>
-                                   </Button>
-                                </Modal.Header>
-                                <Modal.Body>
-                                   <form
-                                       onSubmit={(e) => {
-                     e.preventDefault();
-                     setAddPlan(false);
-                                       }}
-                                   >
-                                      <div className="form-group">
-                                         <label>Running</label>
-                                         <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="Km"
-                                         />
-                                      </div>
-                                      <div className="form-group">
-                                         <label>Cycling</label>
-                                         <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="Km"
-                                         />
-                                      </div>
-                                      <div className="form-group">
-                                         <label>Yoga</label>
-                                         <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="hr"
-                                         />
-                                      </div>
-                                      <button className="btn btn-primary">
-                                         Submit
-                                      </button>
-                                   </form>
-                                </Modal.Body>
-                             </div>
-                          </Modal>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
            <div className="col-xl-9 col-xxl-8">
               <div className="row">
                  <div className="col-xl-12">
@@ -149,20 +40,6 @@ const Timeline = () => {
                              </svg>
                              Filter
                           </Link>
-                          <Dropdown className="mt-sm-0 mt-3">
-                             <Dropdown.Toggle
-                                variant=""
-                                as="button"
-                                className="btn rounded border text-black border-light dropdown-toggle"
-                             >
-                                Unfinished
-                             </Dropdown.Toggle>
-                             <Dropdown.Menu className="dropdown-menu-right">
-                                <Dropdown.Item>Link 1</Dropdown.Item>
-                                <Dropdown.Item>Link 2</Dropdown.Item>
-                                <Dropdown.Item>Link 3</Dropdown.Item>
-                             </Dropdown.Menu>
-                          </Dropdown>
                        </div>
                        <div className="card-body">
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
@@ -220,45 +97,7 @@ const Timeline = () => {
                                 </svg>
                                 <span className="text-info ml-2">Cycling</span>
                              </div>
-                             <Link
-                                to="/workout-plan"
-                                className="btn mb-3 btn-outline-primary rounded mr-3"
-                             >
-                                <i className="las la-caret-right scale-2 mr-3" />
-                                Start Workout
-                             </Link>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
+                             
                           </div>
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
                              <div className="list-icon mr-3 mb-3">
@@ -313,45 +152,6 @@ const Timeline = () => {
                                    Running
                                 </span>
                              </div>
-                             <Link
-                                to="/workout-plan"
-                                className="btn btn-outline-primary rounded mr-3 mb-3"
-                             >
-                                <i className="las la-caret-right scale-2 mr-3" />
-                                Start Workout
-                             </Link>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
                           </div>
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
                              <div className="list-icon mr-3 mb-3">
@@ -414,45 +214,6 @@ const Timeline = () => {
                                    Yoga
                                 </span>
                              </div>
-                             <Link
-                                to="/workout-plan"
-                                className="mb-3 btn btn-primary rounded mr-3"
-                             >
-                                <i className="las la-stop scale-2 mr-3" />
-                                Set Finish
-                             </Link>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
                           </div>
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
                              <div className="list-icon mr-3 mb-3">
@@ -511,38 +272,6 @@ const Timeline = () => {
                                 </svg>
                                 <span className="text-info ml-2">Cycling</span>
                              </div>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
                           </div>
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
                              <div className="list-icon mr-3 mb-3">
@@ -607,38 +336,6 @@ const Timeline = () => {
                                    Yoga
                                 </span>
                              </div>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
                           </div>
                           <div className="d-flex px-3 pt-3 list-row flex-wrap align-items-center mb-2">
                              <div className="list-icon mr-3 mb-3">
@@ -703,38 +400,6 @@ const Timeline = () => {
                                    Yoga
                                 </span>
                              </div>
-                             <Dropdown className="dropdown mb-3">
-                                <Dropdown.Toggle
-                                   as="button"
-                                   variant=""
-                                   className="btn rounded border-light icon-false"
-                                >
-                                   <svg
-                                      width={6}
-                                      height={26}
-                                      viewBox="0 0 6 26"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                   >
-                                      <path
-                                         d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z"
-                                         fill="#585858"
-                                      />
-                                      <path
-                                         d="M6 23C6 24.6569 4.65685 26 3 26C1.34315 26 0 24.6569 0 23C0 21.3431 1.34315 20 3 20C4.65685 20 6 21.3431 6 23Z"
-                                         fill="#585858"
-                                      />
-                                   </svg>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu-right">
-                                   <Dropdown.Item>Edit</Dropdown.Item>
-                                   <Dropdown.Item>Delete</Dropdown.Item>
-                                </Dropdown.Menu>
-                             </Dropdown>
                           </div>
                        </div>
                     </div>
@@ -742,6 +407,7 @@ const Timeline = () => {
               </div>
            </div>
         </div>
+
      </React.Fragment>
   );
 };
