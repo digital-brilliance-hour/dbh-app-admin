@@ -19,7 +19,7 @@ const CourseManuals = () => {
       <Col lg={12}>
                <Card>
                   <Card.Header>
-                     <Card.Title>Ogre's Mayhem</Card.Title>
+                     <Card.Title>Game Info</Card.Title>
                   </Card.Header>
                   <Card.Body>
                      <Table responsive hover>
@@ -28,6 +28,7 @@ const CourseManuals = () => {
                               <th>Course Name</th>
                               <th>Link</th>
                               <th>Application</th>
+                              <th>Technology Focus</th>
                               
                            </tr>
                         </thead>
@@ -40,6 +41,7 @@ const CourseManuals = () => {
                                 </Link>
                               </td>
                               <td>Open BOR</td>
+                              <td>C#</td>
                               
                            </tr>
                            <tr>
@@ -50,6 +52,7 @@ const CourseManuals = () => {
                                  </url>
                                  </td>
                               <td>Open BOR</td>
+                              <td>C#</td>
                            </tr>
                            <tr>
 
@@ -60,6 +63,7 @@ const CourseManuals = () => {
                                  </url>
                               </td>
                               <td>Open BOR</td>
+                              <td>C#</td>
                               
                            </tr>
                            <tr>
@@ -70,7 +74,46 @@ const CourseManuals = () => {
                                 </url>
                               </td>
                               <td>Open BOR</td>
+                              <td>C#</td>
                            </tr>
+                        </tbody>
+                     </Table>
+                  </Card.Body>
+               </Card>
+               {/* <!-- /# card --> */}
+            </Col>
+      </Row>
+
+      <Row>
+      <Col lg={12}>
+               <Card>
+                  <Card.Header>
+                     <Card.Title>Music info</Card.Title>
+                  </Card.Header>
+                  <Card.Body>
+                     <Table responsive hover>
+                        <thead>
+                           <tr>
+                              <th>Course Name</th>
+                              <th>Link</th>
+                              <th>Application</th>
+                              <th>Technology Focus</th>
+                              
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Music Production</td>
+                              <td>
+                                <Link to={"https://bit.ly/3Bak763"}>
+                                 <Badge variant="primary light" >https://docs.google.com/document/d/13d3k84_ULirmWS7rKQDYr6zXpFpKmcb0diWerJYrJ0M/edit?usp=sharing</Badge>
+                                </Link>
+                              </td>
+                              <td>FL Studio</td>
+                              <td>Band Camp</td>
+                              
+                           </tr>
+                           
                         </tbody>
                      </Table>
                   </Card.Body>
