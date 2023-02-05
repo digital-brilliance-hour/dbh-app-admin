@@ -74,12 +74,6 @@ const EditPost = () => {
                                           Post
                                        </Link>
                                        <Link
-                                          to=""
-                                          className="btn btn-danger mr-1"
-                                       >
-                                          Delete Post
-                                       </Link>
-                                       <Link
                                           to="/diet-food-menu"
                                           className="btn rounded text-black border border-light"
                                        >
@@ -137,6 +131,12 @@ const EditPost = () => {
                                           </span>
                                           Reply
                                        </button>
+                                       <Link
+                                          to=""
+                                          className="btn btn-danger ml-1"
+                                       >
+                                          Delete Post
+                                       </Link>
                                     </div>
                                     <div className="profile-uoloaded-post border-bottom-1 pb-5">
                                        <img
@@ -177,6 +177,12 @@ const EditPost = () => {
                                           </span>
                                           Reply
                                        </button>
+                                       <Link
+                                          to=""
+                                          className="btn btn-danger ml-1"
+                                       >
+                                          Delete Post
+                                       </Link>
                                     </div>
                                     <div className="profile-uoloaded-post pb-3">
                                        <img
@@ -217,6 +223,12 @@ const EditPost = () => {
                                           </span>
                                           Reply
                                        </button>
+                                       <Link
+                                          to=""
+                                          className="btn btn-danger ml-1"
+                                       >
+                                          Delete Post
+                                       </Link>
                                     </div>
                                  </div>
                               </div>
