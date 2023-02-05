@@ -88,7 +88,7 @@ const FrequentlyAskedQuestionsForTeachers = () => {
           </Card.Body>
        </Card>
     </div>
-    <div className="col-xl-6 col-lg-6">
+    <div className="col-lg-12">
                <div className="card">
                   <div className="card-header">
                      <h4 className="card-title">Ask A Question </h4>
