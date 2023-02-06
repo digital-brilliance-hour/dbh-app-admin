@@ -13,7 +13,7 @@ const Timeline = () => {
       
       <PageTitle activeMenu="Timeline" motherMenu="Pages" />
         <div className="row">
-           <div className="col-xl-9 col-xxl-8">
+           <div className="col-lg-12">
               <div className="row">
                  <div className="col-xl-12">
                     <div className="card plan-list">
@@ -21,7 +21,7 @@ const Timeline = () => {
                           <div className="mr-auto pr-3">
                              <h4 className="text-black fs-20">Course Schedule</h4>
 
-                          </div>
+                          </div >
                           <Link to="/workout-statistic"
                              className="btn rounded text-black border border-light mr-4"
                           >
