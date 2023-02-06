@@ -54,17 +54,17 @@ const Profile = () => {
                                   {d.map((da, i) => (
                                      <Fragment key={i}>
                                         <td>
-                                           {i === 0 ? (
+                                           {/* {i === 0 ? (
                                               <img
                                                  className="rounded-circle"
                                                  width="35"
                                                  src={da}
                                                  alt=""
                                               />
-                                           ) : (
+                                           ) : ( */}
                                               <Fragment>
                                                  {da}
-                                                 {i === 8 && (
+                                                 {i === 4 && (
                                                     <div className="d-flex">
                                                        <Link
                                                           to="#"
@@ -81,7 +81,6 @@ const Profile = () => {
                                                     </div>
                                                  )}
                                               </Fragment>
-                                           )}
                                         </td>
                                      </Fragment>
                                   ))}
