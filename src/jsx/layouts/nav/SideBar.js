@@ -152,6 +152,7 @@ class SideBar extends Component {
             "Timeline",
             "VideoManuals",
             "profile",
+            "GameLibrary",
          ],
          error = [
             "page-error-400",
@@ -1067,6 +1068,18 @@ class SideBar extends Component {
                               Profile Page
 							  </Link>
                         </li>
+                        <li>
+                                 <Link
+                                    className={`${
+                                       path === "/GameLibrary" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/GameLibrary"
+                                 >
+                                    Game Library
+                                 </Link>
+                              </li>
                      </ul>
                   </li>
                   <li className={`${table.includes(path) ? "mm-active" : ""}`}>
