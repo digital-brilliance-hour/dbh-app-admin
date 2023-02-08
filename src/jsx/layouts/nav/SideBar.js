@@ -153,6 +153,7 @@ class SideBar extends Component {
             "VideoManuals",
             "profile",
             "GameLibrary",
+            "MusicLibrary",
          ],
          error = [
             "page-error-400",
@@ -1078,6 +1079,18 @@ class SideBar extends Component {
                                     to="/GameLibrary"
                                  >
                                     Game Library
+                                 </Link>
+                              </li>
+                              <li>
+                                 <Link
+                                    className={`${
+                                       path === "/MusicLibrary" 
+                                          ? "mm-active"
+                                          : ""
+                                    }`}
+                                    to="/MusicLibrary"
+                                 >
+                                    Music Library
                                  </Link>
                               </li>
                      </ul>
