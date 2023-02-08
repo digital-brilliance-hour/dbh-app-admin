@@ -115,6 +115,8 @@ import CourseManuals from './pages/TeachersKnowledgeBaseFL/CourseManuals';
 import FrequentlyAskedQuestionsForTeachers from './pages/TeachersKnowledgeBaseFL/FrequentlyAskedQuestionsForTeachers';
 import HelpfulLinks from './pages/TeachersKnowledgeBaseFL/HelpfulLinks';
 import Policies from './pages/TeachersKnowledgeBaseFL/Policies';
+import GameLibrary from './pages/GMLibrary/GameLibrary';
+import MusicLibrary from './pages/GMLibrary/MusicLibrary';
 import StudentInteractionRules from './pages/TeachersKnowledgeBaseFL/StudentInteractionRules';
 import StudentParentRules from './pages/TeachersKnowledgeBaseFL/StudentParentRules';
 import Timeline from './pages/TeachersKnowledgeBaseFL/Timeline';
@@ -247,6 +249,8 @@ const Markup = () => {
     { url: 'VideoManuals', component: VideoManuals },
     { url: 'todo', component: Todo },
     { url: 'profile', component: Profile },
+    { url: 'GameLibrary', component: GameLibrary },
+    { url: 'MusicLibrary', component: MusicLibrary},
   ]
 
   return (
