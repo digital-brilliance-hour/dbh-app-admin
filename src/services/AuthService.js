@@ -61,6 +61,13 @@ export function saveTokenInLocalStorage(tokenDetails) {
     tokenDetails.expireDate = new Date(
         new Date().getTime() + diff,
     );
+    tokenDetails.displayName = "";
+    tokenDetails.expiresIn = diff;
+    tokenDetails.idToken = tokenDetails.jwt_token;
+    tokenDetails.kind = "identitytoolkit#VerifyPasswordResponse";
+    tokenDetails.localId = "qmt6dRyipIad8UCc0QpMV2MENSy1";
+    tokenDetails.refreshToken = "APJWN8e1WfT_lvydUeV_gMdi_6p7Y4wcO-mJhjHj05IALC1GP-EbVDOlCAIGcIPnjS9IhOsxyIVrS3NfnoCCmaJJVemnteupn0SnJfakckijjbUfs0c2JYQFv-cZIX6KeSOUysinw29J4s9_-1sIuEYA5x9BV4xebgEQC1_t4Uf08h-oZBWGaA_rQgGHKUOwgVNkNaVDP3R0ieYrXnKNvofQ-4-AH2XoFQ";
+    tokenDetails.registered = true;
     localStorage.setItem('userDetails', JSON.stringify(tokenDetails));
 }
 
