@@ -22,13 +22,13 @@ export function signUp(email, password) {
 
 export function login(email, password) {
     const postData = {
-        email,
-        password,
+        "username": email,
+        "password": password,
         returnSecureToken: true,
     };
 
     return axios.post(
-        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD3RPAp3nuETDn9OQimqn_YF6zdzqWITII`,
+        `https://tutorials.digitalbrilliancehour.com/wp-json/api/v1/token`,
         postData,
     );
 }
@@ -56,8 +56,10 @@ export function formatError(errorResponse) {
 }
 
 export function saveTokenInLocalStorage(tokenDetails) {
+    console.log(tokenDetails)
+    let diff = tokenDetails.expires_in - tokenDetails.iat;
     tokenDetails.expireDate = new Date(
-        new Date().getTime() + tokenDetails.expiresIn * 1000,
+        new Date().getTime() + diff,
     );
     localStorage.setItem('userDetails', JSON.stringify(tokenDetails));
 }
