@@ -91,7 +91,7 @@ function Login (props) {
                                         <label className="mb-2 ">
                                           <strong>Email</strong>
                                         </label>
-                                        <input type="email" className="form-control"
+                                        <input type="text" className="form-control"
 											value={email}
                                            onChange={(e) => setEmail(e.target.value)}
 										   placeholder="Type Your Email Address"

@@ -20,7 +20,7 @@ export function signupAction(email, password, history) {
             saveTokenInLocalStorage(response.data);
             runLogoutTimer(
                 dispatch,
-                response.data.expiresIn * 1000,
+                response.data.expires_in * 1000,
                 history,
             );
             dispatch(confirmedSignupAction(response.data));
@@ -46,9 +46,12 @@ export function loginAction(email, password, history) {
         login(email, password)
             .then((response) => {
                 saveTokenInLocalStorage(response.data);
+                console.log(dispatch);
+                console.log(response.data.expires_in);
+                let diff = response.data.expires_in - response.data.iat;
                 runLogoutTimer(
                     dispatch,
-                    response.data.expiresIn * 1000,
+                    response.data.expires_in + diff,
                     history,
                 );
                 dispatch(loginConfirmedAction(response.data));
