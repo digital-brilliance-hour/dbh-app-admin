@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PageTitle from "../../../../layouts/PageTitle";
 
 import Logo from "../../../../../images/logo.png";
-import LogoText from "../../../../../images/logo-text.png";
+import LogoText from "../../../../../images/logo-text.svg";
 import Qr from "../../../../../images/qr.png";
 
 const Invoice = () => {
