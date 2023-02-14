@@ -6,7 +6,7 @@ import {
     loginAction,
 } from '../../store/actions/AuthActions';
 // image
-//import logo from "../../images/logo-text.png";
+//import logo from "../../images/logo-text.svg";
 //import loginbg from "../../images/login-bg-1.jpg";
 import loginbg from "../../images/login-bg-4.jpg";
 //import loginbg from "../../images/login-bg-1.jpg";
